@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Avendus | Strategic Management CIA 1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F6F5F0;--surf:#fff;--ink:#142A3B;--ink2:#233441;--mute:#617381;--line:#CFD6D4;--teal:#087E8B;--tealbg:#DFF1ED;--amber:#E4A33B;--hero:#142A3B;--herotx:#fff;
+--sans:Inter,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;--serif:Fraunces,Georgia,"Times New Roman",serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1b26;--surf:#142A3B;--ink:#eef2f1;--ink2:#cfd9dd;--mute:#9fb0ba;--line:#2a4254;--teal:#4fc4cf;--tealbg:#12394a;--hero:#08131b}}
+:root[data-theme="dark"]{--bg:#0d1b26;--surf:#142A3B;--ink:#eef2f1;--ink2:#cfd9dd;--mute:#9fb0ba;--line:#2a4254;--teal:#4fc4cf;--tealbg:#12394a;--hero:#08131b}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:calc(76px + env(safe-area-inset-top,0px));height:100%}
+body{background:var(--bg);color:var(--ink2);font:16px/1.65 var(--sans)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--surf);z-index:60}
+a{color:var(--teal)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--surf);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.logo{font:700 24px var(--sans);letter-spacing:-.5px;color:var(--ink);text-decoration:none}.logo i{color:var(--teal);font-style:normal}
+nav{display:flex;gap:22px;overflow-x:auto;white-space:nowrap}
+nav a{color:var(--ink2);text-decoration:none;font-size:14px;font-weight:500;padding:6px 0;border-bottom:2px solid transparent}
+nav a:hover{border-color:var(--teal);color:var(--teal)}
+.tag{font:600 12px var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--teal)}
+.hero{background:var(--hero);color:var(--herotx);padding:96px 0 88px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-120px;top:-120px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,#087E8B 0%,transparent 68%);opacity:.55}
+.hero .tag{color:#73D0C5}
+.hero h1{font:600 clamp(40px,7vw,76px)/1.05 var(--serif);margin:18px 0 20px;position:relative}
+.hero p{max-width:640px;font-size:19px;color:#C1D1D6;position:relative}
+.meta{margin-top:34px;display:flex;gap:10px;flex-wrap:wrap;position:relative}
+.pill{border:1px solid #3b5668;border-radius:99px;padding:6px 14px;font-size:13px;color:#D0DEE3}
+.btn{display:inline-block;margin-top:30px;background:var(--teal);color:#fff;text-decoration:none;padding:13px 26px;border-radius:4px;font-weight:600;position:relative}
+section{padding:84px 0;border-bottom:1px solid var(--line)}
+h2{font:600 clamp(28px,4vw,40px)/1.15 var(--serif);color:var(--ink);margin:10px 0 18px;max-width:760px}
+h3{font:600 18px var(--sans);color:var(--ink);margin-bottom:6px}
+.lead{max-width:720px;color:var(--mute);font-size:18px;margin-bottom:34px}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{background:var(--surf);border:1px solid var(--line);border-radius:6px;padding:26px;border-top:3px solid var(--teal)}
+.card .n{font:600 13px var(--sans);color:var(--teal);letter-spacing:.1em;display:block;margin-bottom:10px}
+.card p{font-size:15px;color:var(--mute)}
+.quote{background:var(--tealbg);border-left:4px solid var(--teal);padding:30px 34px;border-radius:0 6px 6px 0;margin-bottom:30px}
+.quote q{font:400 clamp(22px,3vw,32px)/1.3 var(--serif);color:var(--ink);quotes:"“" "”"}
+.quote p{margin-top:12px;font-size:14px;color:var(--mute)}
+.flow{display:grid;gap:0;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.flow .card{border-radius:0;border-top-width:3px}
+.note{margin-top:24px;padding:16px 20px;background:var(--surf);border:1px solid var(--line);border-left:4px solid var(--amber);border-radius:4px;font-size:15px}
+.src{font-size:13px;color:var(--mute);margin-top:18px}
+.trust{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.trust .card{text-align:center;border-top-color:var(--amber)}
+.trust b{display:block;font:600 12px var(--sans);letter-spacing:.14em;color:var(--teal);margin-bottom:8px}
+.trust .arrow{color:var(--mute);font-size:14px;margin:6px 0}
+.stats{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-bottom:34px}
+.stat{background:var(--hero);color:#fff;border-radius:6px;padding:28px}
+.stat strong{display:block;font:600 44px/1.1 var(--serif);color:#73D0C5}
+.stat span{font-size:14px;color:#C1D1D6}
+.cols{display:grid;gap:32px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+ol.pri{list-style:none;padding:0;display:grid;gap:16px;counter-reset:p}
+ol.pri li{counter-increment:p;display:grid;grid-template-columns:52px 1fr;gap:16px;background:var(--surf);border:1px solid var(--line);border-radius:6px;padding:22px}
+ol.pri li::before{content:counter(p);width:44px;height:44px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center;font:600 18px var(--serif)}
+ol.pri p{font-size:15px;color:var(--mute)}
+.formula{font:400 clamp(22px,3.4vw,38px)/1.3 var(--serif);color:var(--ink);text-align:center;padding:40px 0 10px}
+.formula em{color:var(--teal);font-style:normal}
+.band{background:var(--hero);color:#fff;border-bottom:0}
+.band h2,.band h3{color:#fff}.band .lead{color:#C1D1D6}
+.key{background:var(--tealbg);border-radius:6px;padding:28px 32px;margin-bottom:40px;font-size:18px;color:var(--ink);border-left:4px solid var(--teal)}
+.swot{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.swot .card:nth-child(1){border-top-color:var(--teal)}.swot .card:nth-child(2){border-top-color:#c0504d}.swot .card:nth-child(3){border-top-color:#2e8b57}.swot .card:nth-child(4){border-top-color:var(--amber)}
+ul.l{padding-left:18px;font-size:15px;color:var(--mute)}ul.l li{margin:6px 0}
+.bar{display:grid;grid-template-columns:150px 1fr 90px;gap:12px;align-items:center;font-size:14px;margin:10px 0}
+.bar div{height:10px;background:var(--line);border-radius:5px;overflow:hidden}.bar i{display:block;height:100%;background:var(--teal)}
+.bar span:last-child{color:var(--mute);text-align:right}
+.srcs{display:grid;gap:14px}
+.srcs div{display:grid;grid-template-columns:44px 1fr;gap:14px;font-size:15px}
+.srcs b{color:var(--teal);font:600 15px var(--serif)}
+.srcs a{word-break:break-all;font-size:13px}
+footer{background:var(--hero);color:#9fb0ba;padding:44px 0;font-size:14px}
+footer .logo{color:#fff}footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+@media(max-width:720px){nav{display:none}.bar{grid-template-columns:110px 1fr 70px}section{padding:60px 0}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a class="logo" href="#top">avendus<i>.</i></a>
+<nav><a href="#purpose">Purpose</a><a href="#mission">Mission</a><a href="#values">Values</a><a href="#strategy">Strategy</a><a href="#environment">Environment</a><a href="#industry">Industry</a><a href="#swot">SWOT</a><a href="#appraisal">Appraisal</a><a href="#sources">Sources</a></nav></div></header>
+
+<div class="hero" id="top"><div class="wrap">
+<span class="tag">Strategic Management | CIA 1</span>
+<h1>Purpose, strategic direction and values in practice</h1>
+<p>A strategic reading of Avendus’s published purpose and culture, and of the changing financial-services landscape it operates in.</p>
+<div class="meta"><span class="pill">BBA201-4</span><span class="pill">16 November 2026</span><span class="pill">CIA 1A: Presentation</span><span class="pill">CIA 1B: Analysis</span></div>
+<a class="btn" href="#purpose">Explore the analysis</a></div></div>
+
+<section id="purpose"><div class="wrap">
+<span class="tag">CIA 1A | Vision, mission &amp; values</span>
+<h2>A clear purpose; a distinctive strategy built around complex client needs</h2>
+<div class="quote"><q>Create value for stakeholders through excellence and trust</q>
+<p>Published purpose, Avendus CSR Report (2022). The reviewed material does not present a separate formal vision statement, so this purpose is treated as its stated aspiration, not relabelled as a vision.</p></div>
+<div class="grid">
+<div class="card"><span class="n">01</span><h3>Advisory depth</h3><p>Complex M&amp;A, private equity syndication and ECM.</p></div>
+<div class="card"><span class="n">02</span><h3>Connected services</h3><p>Investment banking linked to credit, wealth and asset management.</p></div>
+<div class="card"><span class="n">03</span><h3>Relationship capital</h3><p>Sector expertise and repeat mid-market client relationships.</p></div></div>
+<p class="src">Sources: Avendus CSR Report (2022); CRISIL Ratings (29 Dec 2025). Strategy links are analysis, not company quotations.</p>
+</div></section>
+
+<section id="mission"><div class="wrap">
+<span class="tag">Mission in practice</span>
+<h2>Help growth-oriented clients reach strategic goals</h2>
+<div class="flow">
+<div class="card"><span class="n">01</span><h3>Understand</h3><p>Entrepreneur and investor ambitions.</p></div>
+<div class="card"><span class="n">02</span><h3>Structure</h3><p>Capital, advice and investment options.</p></div>
+<div class="card"><span class="n">03</span><h3>Execute</h3><p>Transactions, credit and market access.</p></div>
+<div class="card"><span class="n">04</span><h3>Partner</h3><p>Support clients through changing needs.</p></div></div>
+<div class="note"><b>Strategic implication:</b> client lifecycle breadth can deepen relationships, but the client’s interest must remain the organising principle.</div>
+<p class="src">Interpretation based on Avendus’s published group description and CRISIL’s “One Avendus” proposition.</p>
+</div></section>
+
+<section id="values"><div class="wrap">
+<span class="tag">Core values</span>
+<h2>Five stated values act as operating rules, not wall copy</h2>
+<div class="grid">
+<div class="card"><h3>People matter</h3><p>Protect client outcomes; invest in employee capability.</p></div>
+<div class="card"><h3>Do what is right</h3><p>Manage conflicts, suitability and confidentiality.</p></div>
+<div class="card"><h3>Lead through excellence</h3><p>Maintain analytical quality and execution standards.</p></div>
+<div class="card"><h3>Own our work</h3><p>Make accountability clear across hand-offs.</p></div>
+<div class="card"><h3>Embrace differences</h3><p>Build diverse teams and challenge consensus.</p></div></div>
+<p class="src">Values listed in Avendus CSR Report (2022); operating examples are analytical interpretations.</p>
+<h2 style="margin-top:56px">Trust and excellence are strategic assets in regulated, reputation-led markets</h2>
+<div class="trust">
+<div class="card"><b>CLIENT</b><h3>Repeat mandates</h3><div class="arrow">Trust + execution ↓</div><p>Client experience</p></div>
+<div class="card"><b>PEOPLE</b><h3>Talent retention</h3><div class="arrow">Ownership + inclusion ↓</div><p>Culture</p></div>
+<div class="card"><b>RISK</b><h3>Durable franchise</h3><div class="arrow">Integrity + controls ↓</div><p>Resilience</p></div></div>
+<div class="note"><b>Inference:</b> values become a competitive advantage only when supported by systems and consistent decisions. Value creation depends on translating them into incentives, conduct and measurable client outcomes.</div>
+</div></section>
+
+<section id="strategy"><div class="wrap">
+<span class="tag">Positioning &amp; priorities</span>
+<h2>Where strategy is strong, and where the model is exposed</h2>
+<div class="stats">
+<div class="stat"><strong>₹1,551 cr</strong><span>FY2025 consolidated income</span></div>
+<div class="stat"><strong>₹226 cr</strong><span>FY2025 profit after tax</span></div>
+<div class="stat"><strong>0.3×</strong><span>Group gearing at Sep 2025</span></div></div>
+<div class="cols">
+<div><h3 style="margin-bottom:14px">Strategic exposures</h3>
+<ul class="l"><li><b>Earnings cyclicality.</b> Capital-market businesses respond to sentiment and deal timing.</li><li><b>Credit concentration.</b> Chunky wholesale exposures can amplify individual defaults.</li><li><b>Integration.</b> Mizuho approvals and operating integration remain execution priorities.</li></ul></div>
+<div><h3 style="margin-bottom:14px">Group financials (CRISIL)</h3>
+<div class="bar"><span>FY2025 income</span><div><i style="width:100%"></i></div><span>₹1,551 cr</span></div>
+<div class="bar"><span>FY2025 PAT</span><div><i style="width:14.6%"></i></div><span>₹226 cr</span></div>
+<div class="bar"><span>H1 FY26 income</span><div><i style="width:39.3%"></i></div><span>₹609 cr</span></div>
+<div class="bar"><span>H1 FY26 PAT</span><div><i style="width:5.8%"></i></div><span>₹90 cr</span></div></div></div>
+<p class="src">CRISIL figures: FY2025 and Sep 2025; CRISIL Sep 2026 update reports remaining approvals pending at that date. Bars scaled to FY2025 income.</p>
+<h2 style="margin-top:56px">Protect the trust engine while broadening recurring income</h2>
+<ol class="pri">
+<li><div><h3>Deepen recurring wealth</h3><p>Grow advice-led fees and retain client relationships through market cycles.</p></div></li>
+<li><div><h3>Use Mizuho selectively</h3><p>Build cross-border referrals with clear client ownership and conflict controls.</p></div></li>
+<li><div><h3>Keep credit disciplined</h3><p>Set single-name and sector limits; track early-warning and recovery signals.</p></div></li>
+<li><div><h3>Measure the values</h3><p>Monitor client outcomes, complaints, retention, conduct and hand-off quality.</p></div></li></ol>
+<p class="src">Recommendations are analytical; evaluate with recurring-fee share, cost-to-income, retention and stressed-credit metrics.</p>
+<div class="formula">Client ambition <em>×</em> specialist execution <em>×</em> trusted conduct</div>
+<p class="lead" style="text-align:center;margin:10px auto 0">The strategic promise is credible when purpose shows up in execution. The next phase should be judged by durable client value and earnings quality, not service-line breadth alone.</p>
+<div class="note" style="text-align:center"><b>Discussion:</b> Which value is hardest to preserve as Avendus scales and integrates with a global partner?</div>
+</div></section>
+
+<section class="band" id="analysis"><div class="wrap">
+<span class="tag" style="color:#73D0C5">CIA 1B | Strategic analysis</span>
+<h2>Avendus in a changing financial-services landscape</h2>
+<p class="lead">External environment, competitive position and operating choices.</p>
+<div class="key" style="color:#142A3B;background:#DFF1ED;margin:0"><b>Key finding.</b> Avendus has built a differentiated advisory-and-capital platform around complex transactions and mid-market relationships. Its strategic test is to convert that advantage into steadier earnings while controlling credit risk and protecting client trust through a pending change of control.</div>
+</div></section>
+
+<section id="context"><div class="wrap">
+<span class="tag">Company &amp; strategic context</span>
+<h2>Founded in 1999, one platform across five businesses</h2>
+<p class="lead">Avendus operates across investment banking, institutional equities, wealth management, asset management and credit solutions. CRISIL describes “One Avendus” as a cross-service proposition: established corporate relationships can support adjacent financing and wealth mandates. This is a related-diversification strategy, supported by domain knowledge, repeat relationships and transaction execution.</p>
+<div class="stats">
+<div class="stat"><strong>₹1,551 cr</strong><span>FY2025 income</span></div>
+<div class="stat"><strong>₹226 cr</strong><span>FY2025 PAT</span></div>
+<div class="stat"><strong>₹609 cr</strong><span>H1 FY2026 income</span></div>
+<div class="stat"><strong>₹90 cr</strong><span>H1 FY2026 PAT</span></div></div>
+<p class="src">These figures show scale, but not immunity from market cycles.</p>
+</div></section>
+
+<section id="environment"><div class="wrap">
+<span class="tag">External environment</span>
+<h2>PESTEL signals</h2>
+<div class="grid">
+<div class="card"><h3>Political &amp; legal</h3><p>SEBI and RBI oversight governs merchant banking, securities distribution, AIFs and NBFC lending. CRISIL reported CCI approval, but remaining approvals, including the NBFC licence, were pending in September 2026. A strategic shareholder could widen cross-border deal access.</p></div>
+<div class="card"><h3>Economic</h3><p>Indian capital formation, private equity exits and wealth creation expand the addressable market; deal closures and investor sentiment remain cyclical.</p></div>
+<div class="card"><h3>Social</h3><p>Entrepreneurial growth and intergenerational wealth transfer raise demand for succession, private markets and tailored advice; trust and suitability are critical.</p></div>
+<div class="card"><h3>Technological</h3><p>Digital diligence, analytics and secure platforms improve productivity, but cyber risk and data confidentiality are material.</p></div>
+<div class="card"><h3>Environmental</h3><p>Transition investment and climate disclosure create advisory opportunities, while portfolio and financing decisions face rising scrutiny.</p></div></div>
+<p class="src">Sector-level opportunities; Avendus-specific exposure is not publicly quantified in the sources reviewed.</p>
+</div></section>
+
+<section id="industry"><div class="wrap">
+<span class="tag">Industry structure</span>
+<h2>Porter’s Five Forces</h2>
+<div class="grid">
+<div class="card"><h3>Rivalry: High</h3><p>Global banks, domestic investment banks, boutiques, brokers and wealth platforms compete for mandates and talent.</p></div>
+<div class="card"><h3>Buyer power: High</h3><p>Sophisticated corporates and wealthy families compare advisers and negotiate fees; relationships and execution quality reduce switching.</p></div>
+<div class="card"><h3>Supplier power: Moderate–high</h3><p>Senior bankers, investment professionals, funding partners and proprietary deal access are scarce.</p></div>
+<div class="card"><h3>Substitutes: Moderate</h3><p>Internal teams, direct lenders and digital wealth platforms exist, though complex M&amp;A and bespoke credit are harder to replace.</p></div>
+<div class="card"><h3>Entry barriers: Moderate–high</h3><p>Regulated, reputation-sensitive activities, but niche boutiques can enter with a small team.</p></div></div>
+<div class="note"><b>Overall:</b> differentiated expertise and trusted relationships matter more than scale alone.</div>
+</div></section>
+
+<section id="swot"><div class="wrap">
+<span class="tag">SWOT synthesis</span>
+<h2>Strengths, weaknesses, opportunities, threats</h2>
+<div class="swot">
+<div class="card"><h3>Strengths</h3><ul class="l"><li>Long transaction record</li><li>Digital and technology expertise</li><li>Mid-market relationships</li><li>Diversified service lines</li><li>Conservative gearing (0.3× at Sep 2025)</li></ul></div>
+<div class="card"><h3>Weaknesses</h3><ul class="l"><li>Capital-markets earnings volatility</li><li>77% average cost-to-income, FY2021–H1 FY2026</li><li>Relatively nascent wealth and asset-management base</li></ul></div>
+<div class="card"><h3>Opportunities</h3><ul class="l"><li>Cross-border M&amp;A through Mizuho</li><li>Adjacent ECM and credit mandates</li><li>Recurring wealth fees</li></ul></div>
+<div class="card"><h3>Threats</h3><ul class="l"><li>Talent departures</li><li>Aggressive competition</li><li>Delayed deal cycles</li><li>Cyber incidents</li><li>Concentrated wholesale-credit losses</li></ul></div></div>
+<p class="src">CRISIL notes that chunky exposures make asset quality sensitive to slippages.</p>
+</div></section>
+
+<section id="appraisal"><div class="wrap">
+<span class="tag">Critical appraisal</span>
+<h2>Operating decisions, assessed</h2>
+<div class="cols">
+<div class="card"><h3>“One Avendus” model</h3><p>Strategically coherent: shared relationships can lower acquisition cost and increase client lifetime value. The risk is blurred accountability or product pushing; separate suitability checks, clear conflict disclosures and measured cross-referrals are essential.</p></div>
+<div class="card"><h3>Spark and ECM</h3><p>Acquiring Spark’s institutional-equities business and adding ECM broaden the toolkit, but increase integration demands and may intensify earnings exposure to markets.</p></div>
+<div class="card"><h3>Mizuho partnership</h3><p>Offers global reach and potential transaction flow. With approvals still pending in the latest CRISIL update, management should preserve client continuity, talent retention and independent credit controls.</p></div>
+<div class="card"><h3>Credit solutions</h3><p>Deepen the proposition, yet wholesale exposures create asymmetric downside. Conservative gearing helps, but does not eliminate concentration risk.</p></div></div>
+</div></section>
+
+<section id="conclusion"><div class="wrap">
+<span class="tag">Conclusion</span>
+<h2>Disciplined diversification, where advice, capital and trust overlap</h2>
+<p class="lead">Avendus is well positioned where specialist advice, capital access and trusted relationships overlap. Grow recurring wealth and asset-management income, deepen cross-border advisory selectively, and cap single-name and sector credit exposure. Track recurring-fee share, repeat mandates, cost-to-income, employee retention, client complaints and stressed-credit indicators.</p>
+</div></section>
+
+<section id="sources" style="border:0"><div class="wrap">
+<span class="tag">Sources &amp; method</span>
+<h2>Sources and interpretation notes</h2>
+<div class="srcs">
+<div><b>01</b><span>Avendus CSR Report 2022: published purpose and core values.<br><a href="https://www.avendus.com/uploads/Avendus_CSR_Report_2022_b9d14f56d5.pdf">avendus.com CSR Report 2022 (PDF)</a></span></div>
+<div><b>02</b><span>CRISIL Ratings, Avendus Capital, 29 Dec 2025: financials, business mix and risks.<br><a href="https://www.crisilratings.com/mnt/winshare/Ratings/RatingList/RatingDocs/AvendusCapitalPrivateLimited_December%2029_%202025_RR_385756.html">CRISIL rationale, Dec 2025</a></span></div>
+<div><b>03</b><span>CRISIL Ratings, Avendus Capital, 22 Sep 2026: transaction approvals and expected timeline.<br><a href="https://www.crisilratings.com/mnt/winshare/Ratings/RatingList/RatingDocs/AvendusCapitalPrivateLimited_September%2022_%202026_RR_403074.html">CRISIL rationale, Sep 2026</a></span></div>
+<div><b>04</b><span>Competition Commission of India / PIB, 28 Apr 2026: acquisition approval.<br><a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2256395&amp;lang=2&amp;reg=48">PIB press release</a></span></div></div>
+<div class="note">Method: PESTEL, Porter’s Five Forces and SWOT applied to the company and its external environment, then used to evaluate operating decisions. Financial and transaction facts are dated to cited sources; strategic recommendations are analytical inferences.</div>
+</div></section>
+
+<footer><div class="wrap"><a class="logo" href="#top">avendus<i>.</i></a><span>Strategic Management | CIA 1A &amp; 1B | BBA201-4 | 16 November 2026</span></div></footer>
+</body>
+</html>
